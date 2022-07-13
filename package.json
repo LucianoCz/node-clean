@@ -6,7 +6,6 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.0.4",
-    "git-commit-msg-linter": "^4.1.3",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^22.0.0",
@@ -14,6 +13,9 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-standard": "ˆ4.0.1",
+    "git-commit-msg-linter": "^4.1.3",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "typescript": "^4.7.4"
   }
 }
