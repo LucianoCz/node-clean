@@ -1,8 +1,6 @@
 import { SignUpController } from './signup'
-import { MissingParamError, InvalidParamError, ServerError } from '../errors'
-import { IEmailValidator } from '../protocols'
-import { IAccountModel } from '../../domain/models/IAccountModel'
-import { IAddAccount, IAddAccountModel } from '../../domain/useCases/IAddAccount'
+import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
+import { IEmailValidator, IAccountModel, IAddAccount, IAddAccountModel } from './signup-protocols'
 
 const makeEmailValidator = (): IEmailValidator => {
   class EmailValidatorStub implements IEmailValidator {
@@ -181,7 +179,7 @@ describe('SignUp Controller', () => {
     expect(addSpy).toHaveBeenCalledWith({
       name: 'any_name',
       email: 'any@mail.com',
-      password: 'any_password',
+      password: 'any_password'
     })
   })
 })

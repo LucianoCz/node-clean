@@ -1,7 +1,7 @@
-import { HttpRequest, HttpResponse, IController, IEmailValidator } from '../protocols'
-import { MissingParamError, InvalidParamError } from '../errors'
-import { badRequest, serverError } from '../helpers/http-helper'
-import { IAddAccount } from '../../domain/useCases/IAddAccount'
+import { HttpRequest, HttpResponse, IController, IEmailValidator, IAddAccount } from './signup-protocols'
+import { MissingParamError, InvalidParamError } from '../../errors'
+import { badRequest, serverError } from '../../helpers/http-helper'
+
 export class SignUpController implements IController {
   private readonly emailValidator: IEmailValidator
   private readonly addAccount: IAddAccount
